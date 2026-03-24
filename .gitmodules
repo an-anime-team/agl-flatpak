@@ -1,3 +1,9 @@
 [submodule "anime-games-launcher"]
 	path = anime-games-launcher
 	url = https://github.com/an-anime-team/anime-games-launcher
+[submodule "shared-modules"]
+	path = shared-modules
+	url = https://github.com/flathub/shared-modules.git
+[submodule "flatpak-builder-tools"]
+	path = flatpak-builder-tools
+	url = https://github.com/flatpak/flatpak-builder-tools
