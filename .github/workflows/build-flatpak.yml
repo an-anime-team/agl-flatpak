@@ -35,6 +35,8 @@ jobs:
           sudo flatpak install -y flathub org.gnome.Platform/x86_64/49
           sudo flatpak install -y flathub org.gnome.Sdk/x86_64/49
           sudo flatpak install -y flathub runtime/org.freedesktop.Sdk.Extension.rust-stable/x86_64/25.08
+          sudo flatpak install -y flathub runtime/org.freedesktop.Sdk.Compat.i386/x86_64/25.08
+          sudo flatpak install -y flathub runtime/org.freedesktop.Sdk.Extension.toolchain-i386/x86_64/25.08
 
       - name: Generate Cargo sources
         run: |
