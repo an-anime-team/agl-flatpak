@@ -9,19 +9,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           submodules: recursive
-
-      - name: Resize icon
-        run: |
-          sudo apt-get install -y imagemagick
-          convert ./anime-games-launcher/crates/anime-games-launcher/assets/images/icon.png -resize 512x512 ./anime-games-launcher/crates/anime-games-launcher/assets/images/icon.png
 
       - name: Install dependencies
         run: |
           sudo apt-get update -y
+          sudo apt-get install -y --no-install-recommends imagemagick
           sudo apt-get install -y flatpak flatpak-builder python3-tomlkit python3-aiohttp
+
+      - name: Resize icon
+        run: |
+          magick ./anime-games-launcher/crates/anime-games-launcher/assets/images/icon.png -resize 512x512 ./anime-games-launcher/crates/anime-games-launcher/assets/images/icon.png
 
       - name: Add Flathub remote
         run: |
